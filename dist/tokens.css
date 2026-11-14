@@ -1,0 +1,30 @@
+/* MOTIM: gerado de tokens.json por scripts/build.mjs. Não edite à mão; altere o tokens.json. */
+:root {
+  --branco: #ffffff;
+  --fundo-cinza: #e7e7e7;
+  --tinta: #0f0f0f;
+  --roxo-motim: #8a0bfc;
+  --rosa-canto: #ff00fb;
+  --roxo-foto: #2a085e;
+  --detalhe-verde: #00ffa7;
+  --cinza-texto: #999999;
+  --cinza-claro: #b7b7b7;
+  --cinza-legenda: #6b6b6b;
+  --fonte-lato: Lato, "Helvetica Neue", Arial, sans-serif;
+  --espaco-1: 4px;
+  --espaco-2: 8px;
+  --espaco-3: 16px;
+  --espaco-4: 32px;
+  --raio-reto: 0px;
+  --raio-medio: 12px;
+  --raio-simbolo: 28%;
+  --degrade-marca: linear-gradient(90deg, var(--roxo-motim), var(--rosa-canto));
+}
+
+.display { font-family: var(--fonte-lato); font-size: 64px; line-height: 68px; font-weight: 900; }
+.titulo { font-family: var(--fonte-lato); font-size: 32px; line-height: 38px; font-weight: 900; }
+.subtitulo { font-family: var(--fonte-lato); font-size: 20px; line-height: 28px; font-weight: 300; }
+.rotulo { font-family: var(--fonte-lato); font-size: 12px; line-height: 16px; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; }
+.corpo { font-family: var(--fonte-lato); font-size: 15px; line-height: 22px; font-weight: 400; }
+.corpo-forte { font-family: var(--fonte-lato); font-size: 15px; line-height: 22px; font-weight: 700; }
+.legenda { font-family: var(--fonte-lato); font-size: 11px; line-height: 15px; font-weight: 400; }

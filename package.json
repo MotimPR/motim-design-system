@@ -1,0 +1,21 @@
+{
+  "name": "@motim/design-system",
+  "version": "1.0.0",
+  "description": "Design system da MOTIM: tokens de cor, tipografia, espaço e raio, e os arquivos de marca.",
+  "private": true,
+  "type": "module",
+  "main": "dist/tokens.js",
+  "types": "dist/tokens.d.ts",
+  "exports": {
+    ".": { "types": "./dist/tokens.d.ts", "default": "./dist/tokens.js" },
+    "./tokens.css": "./dist/tokens.css",
+    "./tokens.json": "./tokens.json",
+    "./marca/*": "./marca/*"
+  },
+  "files": ["dist", "tokens.json", "marca/*.png"],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs --check && node scripts/check-contrast.mjs"
+  },
+  "repository": { "type": "git", "url": "git+https://github.com/MotimPR/motim-design-system.git" }
+}

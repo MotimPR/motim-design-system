@@ -10,6 +10,7 @@
   --cinza-texto: #999999;
   --cinza-claro: #b7b7b7;
   --cinza-legenda: #6b6b6b;
+  --grafite: #2a2a2a;
   --fonte-lato: Lato, "Helvetica Neue", Arial, sans-serif;
   --espaco-1: 4px;
   --espaco-2: 8px;
@@ -28,3 +29,15 @@
 .corpo { font-family: var(--fonte-lato); font-size: 15px; line-height: 22px; font-weight: 400; }
 .corpo-forte { font-family: var(--fonte-lato); font-size: 15px; line-height: 22px; font-weight: 700; }
 .legenda { font-family: var(--fonte-lato); font-size: 11px; line-height: 15px; font-weight: 400; }
+.site-hero-grande { font-family: var(--fonte-lato); font-size: 96px; line-height: 96px; font-weight: 700; }
+.site-hero { font-family: var(--fonte-lato); font-size: 56px; line-height: 60px; font-weight: 700; }
+.site-titulo { font-family: var(--fonte-lato); font-size: 36px; line-height: 44px; font-weight: 800; }
+.site-chamada { font-family: var(--fonte-lato); font-size: 36px; line-height: 54px; font-weight: 700; }
+.site-destaque { font-family: var(--fonte-lato); font-size: 32px; line-height: 48px; font-weight: 600; }
+.site-subtitulo { font-family: var(--fonte-lato); font-size: 24px; line-height: 32px; font-weight: 600; }
+.site-corpo { font-family: var(--fonte-lato); font-size: 20px; line-height: 30px; font-weight: 400; }
+.site-botao { font-family: var(--fonte-lato); font-size: 20px; line-height: 24px; font-weight: 800; }
+.site-menu { font-family: var(--fonte-lato); font-size: 16px; line-height: 24px; font-weight: 800; }
+.site-pequeno { font-family: var(--fonte-lato); font-size: 16px; line-height: 24px; font-weight: 400; }
+.site-numero { font-family: var(--fonte-lato); font-size: 128px; line-height: 128px; font-weight: 800; }
+.site-numero-case { font-family: var(--fonte-lato); font-size: 56px; line-height: 56px; font-weight: 700; }

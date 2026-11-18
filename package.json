@@ -1,6 +1,6 @@
 {
   "name": "@motim/design-system",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Design system da MOTIM: tokens de cor, tipografia, espaço e raio, e os arquivos de marca.",
   "private": true,
   "type": "module",

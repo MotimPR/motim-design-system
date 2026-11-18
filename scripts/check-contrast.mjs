@@ -25,6 +25,8 @@ const regras = [
   ["roxo-motim", "fundo-cinza", "pequeno"],
   ["branco", "roxo-motim", "pequeno"],
   ["cinza-legenda", "branco", "pequeno"],
+  ["branco", "grafite", "pequeno"],
+  ["grafite", "branco", "pequeno"],
   ["tinta", "rosa-canto", "pequeno"],
   ["tinta", "detalhe-verde", "pequeno"],
   ["rosa-canto", "branco", "grande"],

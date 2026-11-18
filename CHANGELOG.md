@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.1.1 (18/11/2026)
+
+- `site-corpo` fica em 20px também no celular, como no motim.cc (decisão do Felipe). Antes a nota de uso dizia 18px no celular.
+
 ## v1.1.0 (18/11/2026)
 
 - Grupo de texto **Site**, com a escala medida no motim.cc: 12 estilos (`site-hero-grande`, `site-hero`, `site-titulo`, `site-chamada`, `site-destaque`, `site-subtitulo`, `site-corpo`, `site-botao`, `site-menu`, `site-pequeno`, `site-numero`, `site-numero-case`). O site novo usa esses estilos para ficar igual ao atual; os estilos da apresentação (display, titulo, corpo e os outros) continuam para slides, estudos e o produto.

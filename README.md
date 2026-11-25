@@ -12,15 +12,16 @@ A fonte da verdade do conteúdo é o manual da marca no vault (`Posicionamento e
 | `dist/tokens.css` | Variáveis CSS e classes de texto, geradas do `tokens.json` |
 | `dist/tokens.js` e `dist/tokens.d.ts` | Os mesmos tokens para JavaScript e TypeScript |
 | `marca/` | Logo, símbolo, grafismos do X e textura de fundo |
+| `fontes/` | Lato em WOFF2 (300, 400, 700 e 900) e a licença OFL |
 | `scripts/build.mjs` | Gera o `dist/` |
 | `scripts/check-contrast.mjs` | Confere as regras de contraste da marca |
 
 ## Como usar em outro repositório
 
-Instale numa versão fixa (o repositório é privado; no build da Cloudflare, use um token de leitura do GitHub):
+Instale numa versão fixa (o repositório é público; não precisa de token):
 
 ```bash
-npm install github:MotimPR/motim-design-system#v1.0.0
+npm install github:MotimPR/motim-design-system#v1.2.0
 ```
 
 No CSS:
@@ -38,10 +39,10 @@ import { tokens } from "@motim/design-system";
 tokens.cores["roxo-motim"]; // "#8a0bfc"
 ```
 
-Fonte (Lato, Google Fonts):
+Fonte (Lato): desde a v1.2.0, os arquivos WOFF2 vêm no pacote, em `fontes/`, e o `tokens.css` já traz as regras `@font-face` e a fonte de reserva "Lato Reserva" (Arial ajustada às medidas da Lato). Não use o Google Fonts. Para a página aparecer mais rápido, pré-carregue os pesos do topo da página (no site, 400 e 700):
 
 ```html
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap">
+<link rel="preload" href="/caminho/para/lato-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 ```
 
 ## Cores

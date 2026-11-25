@@ -15,8 +15,21 @@ const estilos = tokens.type.groups.flatMap((g) => g.styles.map((s) => ({ ...s, f
 const espacos = tokens.spacing.tokens;
 const raios = tokens.radius.tokens;
 
+// Fontes: os arquivos WOFF2 ficam em fontes/ e são servidos pelo próprio site (sem depender do Google Fonts).
+const fontes = tokens.type.fonts ?? [];
+const reserva = tokens.type.fallback;
+
 function css() {
-  const linhas = [`/* ${aviso} */`, ":root {"];
+  const linhas = [`/* ${aviso} */`];
+  for (const f of fontes) {
+    linhas.push(`@font-face { font-family: "${f.family}"; font-style: ${f.style}; font-weight: ${f.weight}; font-display: swap; src: url("../${f.file}") format("woff2"); unicode-range: ${f.unicodeRange}; }`);
+  }
+  if (reserva) {
+    const locais = reserva.local.map((n) => `local("${n}")`).join(", ");
+    linhas.push(`@font-face { font-family: "${reserva.name}"; src: ${locais}; size-adjust: ${reserva.sizeAdjust}; ascent-override: ${reserva.ascentOverride}; descent-override: ${reserva.descentOverride}; line-gap-override: ${reserva.lineGapOverride}; }`);
+  }
+  if (fontes.length || reserva) linhas.push("");
+  linhas.push(":root {");
   for (const c of cores) linhas.push(`  --${c.name}: ${c.value};`);
   for (const [nome, valor] of Object.entries(familias)) linhas.push(`  --fonte-${nome}: ${valor};`);
   for (const e of espacos) linhas.push(`  --${e.name}: ${e.value};`);
@@ -41,6 +54,7 @@ function js() {
     nome: tokens.name,
     cores: Object.fromEntries(cores.map((c) => [c.name, c.value])),
     fontes: familias,
+    arquivosDeFonte: fontes.map((f) => ({ familia: f.family, peso: f.weight, arquivo: f.file })),
     texto: Object.fromEntries(
       estilos.map((s) => [
         s.name,
@@ -66,6 +80,7 @@ export declare const tokens: {
   nome: string;
   cores: Record<Cor, string>;
   fontes: Record<string, string>;
+  arquivosDeFonte: { familia: string; peso: number; arquivo: string }[];
   texto: Record<EstiloTexto, EstiloTextoValor>;
   espacos: Record<Espaco, string>;
   raios: Record<Raio, string>;

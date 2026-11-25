@@ -8,6 +8,7 @@ export declare const tokens: {
   nome: string;
   cores: Record<Cor, string>;
   fontes: Record<string, string>;
+  arquivosDeFonte: { familia: string; peso: number; arquivo: string }[];
   texto: Record<EstiloTexto, EstiloTextoValor>;
   espacos: Record<Espaco, string>;
   raios: Record<Raio, string>;
